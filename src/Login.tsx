@@ -1,9 +1,9 @@
 import { VStack, Image, Text, Box, FormControl, Input, Button, Link } from "native-base";
-import Logo from "./src/assets/ufpr.png";
+import Logo from "../src/assets/ufpr.png";
 import { TouchableOpacity } from "react-native";
-import { TEMAS } from "./src/estilos/temas";
+import { TEMAS } from "./estilos/temas";
 
-export default function Login() {
+export default function Login({navigation}) {
   return (
     <VStack flex={1} alignItems="center" p={5} justifyContent="center">
       <Image source={Logo} alt="Logo do app da Aula" />
@@ -23,7 +23,9 @@ export default function Login() {
           <Input placeholder="Insira sua senha!" size="lg" w="100%" borderRadius="lg" bgColor="gray.100" shadow={3} />
         </FormControl>
       </Box>
-      <Button w="100%" bg={TEMAS.colors.blue[800]} mt={10} borderRadius="lg" > Acessar! </Button>
+      <Button w="100%" bg={TEMAS.colors.blue[800]} mt={10} borderRadius="lg" 
+        onPress={()=> navigation.navigate('Tabs')}
+      > Acessar! </Button>
       <TouchableOpacity>
         <Link href="https://sistemas.ufpr.br/login" mt={5}>
             Recuperar conta!

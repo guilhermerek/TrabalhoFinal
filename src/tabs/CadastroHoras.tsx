@@ -1,10 +1,10 @@
 import { VStack, Image, Box, Checkbox, ScrollView } from "native-base";
-import  Logo from './src/assets/ufpr.png'
-import { Titulo } from "./src/componentes/Titulo";
-import { EntradaTexto } from "./src/componentes/EntradaTexto";
-import { Botao } from "./src/componentes/Botao";
+import  Logo from '../assets/ufpr.png'
+import { Titulo } from "../componentes/Titulo";
+import { EntradaTexto } from "../componentes/EntradaTexto";
+import { Botao } from "../componentes/Botao";
 import { useState } from "react";
-import { secoes } from "./src/utils/CadastroHorasTexto";
+import { secoes } from "../utils/CadastroHorasTexto";
 
 export default function CadastroHoras() {
 
