@@ -1,4 +1,3 @@
-import { StyleSheet, View } from 'react-native';
 import { TEMAS } from '../estilos/temas';
 import {  Text, Button, VStack, Image } from "native-base";
 import Logo from "../assets/ufpr.png";
@@ -19,9 +18,9 @@ export default function Principal({navigation}) {
     <Text fontSize="2xl" fontWeight="bold" color={"gray.500"} textAlign="center" mt={5} >
         Tela Principal!
     </Text>
-      <Button w="100%" bg={TEMAS.colors.blue[800]} mt={10} borderRadius="lg" 
-        onPress={() => navigation.navigate('CadastroUnidade')}
-      >Cadastro de Unidade</Button>
+      <Button w="100%" bg={TEMAS.colors.purple[500]} mt={10} borderRadius="lg" 
+        onPress={() => navigation.navigate('CadastroHoras')}
+      >Cadastrar horas</Button>
     </VStack>
   );
 }
@@ -33,15 +32,3 @@ export default function Principal({navigation}) {
  * A ação é definida usando a propriedade onPress,
  * que navega para a tela "CadastroUnidade" usando navigation.navigate
  */
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-/**a principio esta sem uso a estilização a cima. */

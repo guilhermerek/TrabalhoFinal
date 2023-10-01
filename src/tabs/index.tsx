@@ -1,17 +1,19 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
+/*import Ionicons from "react-native-vector-icons/Ionicons";*/
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import CadastroUnidade from "./CadastroHoras";
 import Principal from "./Principal";
+
 
 const Tab = createBottomTabNavigator();
 
 const screenOptions= {
     tabBarStyle:{
-        backgroundColor:"#002851"
+        backgroundColor: "#8806ce"
     },
-    tabBarActiveTintColor:"#339cff",
-    tabBarInactiveTintColor:"#fff"
+    tabBarActiveTintColor:"#fff",
+    tabBarInactiveTintColor:"#000"
 };
 
 
@@ -24,9 +26,9 @@ const tabs = [
     },
     {
         id: 2,
-        name: "CadastroUnidade",
+        name: "CadastroHoras",
         component: CadastroUnidade,
-        icon: "business"
+        icon: "certificate"
     }
 ]
 
@@ -42,7 +44,7 @@ export default function Tabs(){
                 options={{
                     headerShown: false,
                     tabBarIcon: ({color, size})=> (
-                        <Ionicons name={tabs.icon} color={color} size={size}/>
+                        <MaterialCommunityIcons name={tabs.icon} color={color} size={size}/>
                     )
                 }}
                 />

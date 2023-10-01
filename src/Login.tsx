@@ -23,7 +23,7 @@ export default function Login({navigation}) {
           <Input placeholder="Insira sua senha!" size="lg" w="100%" borderRadius="lg" bgColor="gray.100" shadow={3} />
         </FormControl>
       </Box>
-      <Button w="100%" bg={TEMAS.colors.blue[800]} mt={10} borderRadius="lg" 
+      <Button w="100%" bg={TEMAS.colors.purple[500]} mt={10} borderRadius="lg" 
         onPress={()=> navigation.navigate('Tabs')}
       > Acessar! </Button>
       <TouchableOpacity>

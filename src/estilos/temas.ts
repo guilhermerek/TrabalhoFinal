@@ -10,7 +10,11 @@ export const TEMAS = extendTheme({
             800: '#0B3B60'
         },
         white: '#fff',
-        black: '#000'
+        black: '#000',
+        purple: {
+            500: '#bf00ff',
+            800: '#8806ce '
+        }
     },
     fontSizes: {
         xs: 12,

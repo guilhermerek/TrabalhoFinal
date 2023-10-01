@@ -1,4 +1,4 @@
-import { VStack, Image, Text, Box, FormControl, Input, Button, Link } from "native-base";
+import { VStack, Image, Text } from "native-base";
 import Logo from "./assets/ufpr.png";
 
 /**componente principal, que representa a tela de login*/
