@@ -9,7 +9,7 @@ const secoes = [
           placeholder: "(Eventos, cursos, congressos e etc...)"
         },        
       ],
-    checkbox: [],
+    checkbox: []
     },
     {
       id: 2,
@@ -44,15 +44,15 @@ const secoes = [
         id: 6,
         label: "Informe o código do certificado.",
         placeholder: "Digite o código, caso possua."
-      }
+      },
   ],
-  checkbox: [],
+  checkbox: []
   },
   {
     //necessario inserir lista mostrando o que foi preenchido, para fazer um botão: "As informações estão corretas: checkbox para dar ok e botao concluir"
     id: 3,
     titulo: "Indique se a unidade esta ativa ou não",
-    EntradaTexto: [],
+    entradaTexto: [],
     checkbox: [
         {
         id: 1,
@@ -61,7 +61,7 @@ const secoes = [
     {
         id: 2,
         value: "Unidade inativa!"
-    }
+    },
 ]
 }
 ]

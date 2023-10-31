@@ -8,7 +8,7 @@ import { secoes } from "../utils/CadastroHorasTexto";
 
 export default function CadastroHoras() {
 
-    const [numSecao, setNumSecao] = useState(0);
+  const [numSecao, setNumSecao] = useState(0);
 
   function avancarSecao() {
     if(numSecao < secoes.length - 1){
@@ -45,8 +45,8 @@ export default function CadastroHoras() {
           
       </Box>
       {console.log(numSecao)}
-      {(numSecao < secoes.length - 1) && <Botao onPress= {()=> avancarSecao()} mb={10}> Avançar </Botao>}
-      {(numSecao > 0 ) && <Botao onPress= {()=> voltarSecao()} bgColor='grey.400' > Voltar </Botao>}
+      {numSecao < secoes.length - 1 && <Botao onPress= {()=> avancarSecao()} mb={-2}> Avançar </Botao>}
+      {numSecao > 0  && <Botao onPress= {()=> voltarSecao()} bgColor='grey.300' mb={8}> Voltar </Botao>}
       
     </VStack>
     </ScrollView>

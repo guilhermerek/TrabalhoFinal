@@ -15,7 +15,7 @@ export default function Principal({navigation}) {
     <VStack flex={1} alignItems="center" p={5} justifyContent="center">
     <Image source={Logo} alt="Logo do app da Aula" />
       
-    <Text fontSize="2xl" fontWeight="bold" color={"gray.500"} textAlign="center" mt={5} >
+    <Text fontSize="2xl" fontWeight="bold" color={"black"} textAlign="center" mt={5} >
         Tela Principal!
     </Text>
       <Button w="100%" bg={TEMAS.colors.purple[500]} mt={10} borderRadius="lg" 
