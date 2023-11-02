@@ -51,16 +51,12 @@ const secoes = [
   {
     //necessario inserir lista mostrando o que foi preenchido, para fazer um botão: "As informações estão corretas: checkbox para dar ok e botao concluir"
     id: 3,
-    titulo: "Indique se a unidade esta ativa ou não",
+    titulo: "Os dados estão corretos?",
     entradaTexto: [],
     checkbox: [
         {
         id: 1,
-        value: "Unidade ativa!"
-    },
-    {
-        id: 2,
-        value: "Unidade inativa!"
+        value: "As informações estão corretas."
     },
 ]
 }
