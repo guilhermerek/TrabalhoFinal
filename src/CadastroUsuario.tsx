@@ -1,4 +1,4 @@
-import { VStack, Image, Box, Button, FormControl, Radio } from "native-base";
+import { VStack, Image, Box, Button, FormControl, Radio, ScrollView } from "native-base";
 import Logo from "./assets/ufpr.png";
 import { TEMAS } from "./estilos/temas";
 import { Titulo } from "./componentes/Titulo";
@@ -19,49 +19,53 @@ export default function CadastroUsuario() {
 
   return (
     /**
-     * organizado em um VStack com configurações para alinhar
-     * o conteúdo ao centro verticalmente (alignItems="center")
-     * e preenchimento (p={5}) e justificar o conteúdo ao centro
-     * horizontalmente (justifyContent="center").
-     */
-    <VStack flex={1} alignItems="center" p={5} justifyContent="center">
-
-      <Image source={Logo} alt="Logo do app da Aula" />
-      <Titulo> {usuarios.titulo} </Titulo>
-      <Box>
-        {
-          usuarios.entradaTexto.map(entrada => {
-            return (
-              <EntradaTexto
-              key={entrada.id}
-              label={entrada.label}
-              placeholder={entrada.placeholder}
-              value={dados[entrada.label]}
-              secureTextEntry={entrada.secureTextEntry}
-              onChangeText={(text => atualizaDados(entrada.name, text))}
-              />
-            )
-          })
-        }
-        <FormControl.Label mt={5}>Tipo de usuario:</FormControl.Label>
-        <Radio.Group name="radioTipoUsuario" value={radioValue} onChange={(nextValue)=>{
-          setradioValue(nextValue);
-        }}>
-          <Radio value="normal" my={1}>
-            Usuario comum.
-          </Radio>
-          <Radio value="admin" my={1}>
-            Administrador.
-          </Radio>
-        </Radio.Group>
-
-      </Box>
-      <Button w="100%" bg={TEMAS.colors.blue[400]} mb={10} borderRadius={"lg"} onPress={() => console.log(dados)}>
-        Cadastrar
-      </Button>
-
+      * organizado em um VStack com configurações para alinhar
+      * o conteúdo ao centro verticalmente (alignItems="center")
+      * e preenchimento (p={5}) e justificar o conteúdo ao centro
+      * horizontalmente (justifyContent="center").
+      */
+     
+    <ScrollView flex={1} p={5}>
       
-    </VStack>
+      <VStack flex={1} alignItems="center" p={5} justifyContent="center">
+
+        <Image source={Logo} alt="Logo do app da Aula" />
+        <Titulo> {usuarios.titulo} </Titulo>
+        <Box>
+          {
+            usuarios.entradaTexto.map(entrada => {
+              return (
+                <EntradaTexto
+                key={entrada.id}
+                label={entrada.label}
+                placeholder={entrada.placeholder}
+                value={dados[entrada.label]}
+                secureTextEntry={entrada.secureTextEntry}
+                onChangeText={(text => atualizaDados(entrada.name, text))}
+                />
+              )
+            })
+          }
+          <FormControl.Label mt={5}>Tipo de usuario:</FormControl.Label>
+          <Radio.Group name="radioTipoUsuario" value={radioValue} onChange={(nextValue)=>{
+            setradioValue(nextValue);
+          }}>
+            <Radio value="normal" my={1}>
+              Usuario comum.
+            </Radio>
+            <Radio value="admin" my={1}>
+              Administrador.
+            </Radio>
+          </Radio.Group>
+
+        </Box>
+        <Button w="100%" bg={TEMAS.colors.blue[400]} mb={10} borderRadius={"lg"} onPress={() => console.log(dados)}>
+          Cadastrar
+        </Button>
+
+        
+      </VStack>
+    </ScrollView>
 
   );
 }

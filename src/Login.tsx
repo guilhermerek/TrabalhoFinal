@@ -5,6 +5,7 @@ import { TEMAS } from "./estilos/temas";
 import { useState } from "react";
 import { EntradaTexto } from "./componentes/EntradaTexto";
 import { fazerLogin } from "./servicos/autenticacao";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Login({navigation}) {
 
@@ -16,6 +17,13 @@ export default function Login({navigation}) {
     const resultado = await fazerLogin(grr,senha)
     console.log(resultado);
     if(resultado && resultado.result.id){
+
+      try {
+        await AsyncStorage.setItem('idusuario', (resultado.result.id).toString());
+      } catch(error){
+        console.log(error);
+      }
+
       navigation.replace('Tabs');
     }else{
       toast.show({
