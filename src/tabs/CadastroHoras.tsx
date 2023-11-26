@@ -1,10 +1,17 @@
 import { VStack, Image, Box, Checkbox, ScrollView } from "native-base";
 import  Logo from '../assets/ufpr.png'
 import { Titulo } from "../componentes/Titulo";
-import { EntradaTexto } from "../componentes/EntradaTexto";
+
 import { Botao } from "../componentes/Botao";
 import { useState } from "react";
 import { secoes } from "../utils/CadastroHorasTexto";
+import React from "react";
+
+import { StyleSheet, View } from 'react-native';
+import BotaoRadio from "../componentes/BotaoRadio";
+import { EntradaTexto } from "../componentes/EntradaTexto";
+
+
 
 export default function CadastroHoras() {
 
@@ -32,11 +39,19 @@ export default function CadastroHoras() {
       
 
       <Box>
-       {
-        secoes[numSecao].entradaTexto.map(entrada => {
+      {
+        secoes[numSecao].entradaTexto.map( entrada=> {
           return <EntradaTexto label={entrada.label} placeholder={entrada.placeholder} key={entrada.id} />
         })}
+          
+          <View style={styles.container}>
+          <BotaoRadio />
+        </View>
+
       </Box>
+      
+
+
       <Box>    
         {
           secoes[numSecao].checkbox.map(checkbox => {
@@ -53,3 +68,10 @@ export default function CadastroHoras() {
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

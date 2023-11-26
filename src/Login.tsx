@@ -16,18 +16,17 @@ export default function Login({navigation}) {
   async function login() {
     const resultado = await fazerLogin(grr,senha)
     console.log(resultado);
-    if(resultado && resultado.result.id){
+    if(resultado && resultado.result.idcredenciais){
 
       try {
-        await AsyncStorage.setItem('idusuario', (resultado.result.id).toString());
+        await AsyncStorage.setItem('idusuario', (resultado.result.idcredenciais).toString());
       } catch(error){
         console.log(error);
       }
-
       navigation.replace('Tabs');
     }else{
       toast.show({
-        title: "Erro no LOGIN!",
+        title: "Erro no login!",
         description: "Email ou senha incorreta!",
         backgroundColor: 'red.500'
       })

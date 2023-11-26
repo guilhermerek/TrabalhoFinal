@@ -5,6 +5,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import CadastroUnidade from "./CadastroHoras";
 import Principal from "./Principal";
 import PerfilUsuario from "./PerfilUsuario";
+import CadastroHoras from "./CadastroHoras";
 
 
 const Tab = createBottomTabNavigator();
@@ -27,8 +28,8 @@ const tabs = [
     },
     {
         id: 2,
-        name: "Cadastro Horas",
-        component: CadastroUnidade,
+        name: "CadastroHoras",
+        component: CadastroHoras,
         icon: "certificate"
     },
     {
